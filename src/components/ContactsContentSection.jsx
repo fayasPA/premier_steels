@@ -42,19 +42,24 @@ const ContactsContentSection = () => {
             setErrors(newErrors);
         }
     };
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (validateForm()) {
             try {
+                const countryCode = '91'; // Default country code
+                const fullPhoneNumber = `${countryCode}${formValues.phone_number}`;
+    
                 await toast.promise(
-                    axios.post(POST_ENQUIRY_FORM, formValues),
+                    axios.post(POST_ENQUIRY_FORM, new URLSearchParams({
+                        ...formValues
+                    }).toString()),
                     {
                         pending: 'Submitting...',
                         success: 'Form submitted successfully!',
                         error: 'Error submitting form',
                     }
                 );
+    
                 setFormValues({ name: '', email: '', phone_number: '', message: '' }); // Reset form fields
             } catch (error) {
                 console.error("Form submission error:", error);
@@ -63,6 +68,7 @@ const ContactsContentSection = () => {
             toast.error("Please fill out all required fields.");
         }
     };
+    
 
     return (
         <>
