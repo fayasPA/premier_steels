@@ -12,4 +12,4 @@ Allow: /products/
 Allow: /about-us/
 
 # Specify the location of your sitemap
-Sitemap: http://www.yoursteelwebsite.com/sitemap.xml
+Sitemap: http://www.thepremiersteels.com/sitemap.xml

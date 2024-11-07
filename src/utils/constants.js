@@ -49,9 +49,6 @@ export const productsList = [
     { title: 'MS Chequered Plates', category: 'Energy / Tools', imageSrc: sheet2 },
     { title: 'GP/MS Tubes,Pipes,Squares,Rounds', category: 'Energy / Tools', imageSrc: squareAndRound },
     { title: 'MS Plate & Coil', category: 'Energy / Tools', imageSrc: Gisheet },
-
-
-
   ];
 
   export const featuredProjects = [
