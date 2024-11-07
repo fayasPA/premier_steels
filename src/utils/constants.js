@@ -65,7 +65,7 @@ export const productsList = [
       description: [
         "Premier steels is established in 1982 by V A Mohamed Ashraf (Achu).",
         "Premier Steels started as a small business to become one of the most respected names in the Steel market.",
-        "With a huge stock ranging from S.S Pipes, Sheets, Angles, and various other products all available at competitive prices, we also assure an exceptional quality of our products.",
+        "With a huge stock ranging from Sheets, Angles, and various other structural products all available at competitive prices, we also assure an exceptional quality of our products.",
         "Premier Steels is committed to customer satisfaction, providing reliable service and timely delivery to meet the demands of diverse industries.",
         " Over the years, the company has built a reputation for excellence driven by a dedication to innovation and continuous improvement.",
       ],
