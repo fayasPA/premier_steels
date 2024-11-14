@@ -154,7 +154,7 @@ const Navbar = ({ setIsEnquiryModalOpen }) => {
                             key={item.order}
                             to={item.path}
                             className={({ isActive }) =>
-                                `block px-3 py-2 rounded-md text-sm ${isActive ? 'text-white font-extrabold' : 'text-white font-extralight '}
+                                `block w-full px-3 py-2 rounded-md text-sm ${isActive ? 'text-white font-extrabold' : 'text-white font-extralight '}
                             `}
                             onClick={() => setMobileMenuOpen(false)}
                         >
@@ -162,7 +162,7 @@ const Navbar = ({ setIsEnquiryModalOpen }) => {
                         </NavLink>
                     ))}
 
-                    <button className="ml-3 request-nav-button animate-pulse mobile px-7 py-1"
+                    <button className="ml-3 mt-1 request-nav-button animate-pulse mobile px-7 py-1"
                         onClick={() => setIsEnquiryModalOpen(true)}
                     >
                         <svg viewBox="0 0 24 24" className="arr-2" xmlns="https://www.w3.org/2000/svg">
