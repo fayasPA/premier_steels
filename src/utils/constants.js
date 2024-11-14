@@ -52,10 +52,30 @@ export const productsList = [
   ];
 
   export const featuredProjects = [
-      { id: '01', name: 'MS Joists', image: steelAngles, description: 'Sponge iron is the key raw material required to manufacture high quality steel. It is quite versatile and can be used in both induction as well as electric arc furnaces.' },
-      { id: '02', name: 'MS Channels', image: channel, description: 'Sponge iron is the key raw material required to manufacture high quality steel. It is quite versatile and can be used in both induction as well as electric arc furnaces.' },
-      { id: '03', name: 'MS Plates', image: sheet, description: 'Sponge iron is the key raw material required to manufacture high quality steel. It is quite versatile and can be used in both induction as well as electric arc furnaces.' },
-      { id: '04', name: 'GP/MS Tubes & Pipes', image: squareAndRound, description: 'Sponge iron is the key raw material required to manufacture high quality steel. It is quite versatile and can be used in both induction as well as electric arc furnaces.' },
+    {
+      id: '01',
+      name: 'MS Joists',
+      image: steelAngles,
+      description: 'MS Joists are made from high-quality steel and offer durability for industrial applications. Suitable for both induction and electric arc furnaces.'
+    },
+    {
+      id: '02',
+      name: 'MS Channels',
+      image: channel,
+      description: 'MS Channels offer versatility and are used in various structural and construction projects. Made from high-grade steel.'
+    },
+    {
+      id: '03',
+      name: 'MS Plates',
+      image: sheet,
+      description: 'MS Plates are perfect for a wide range of construction, machinery, and fabrication needs, offering strength and durability.'
+    },
+    {
+      id: '04',
+      name: 'GP/MS Tubes & Pipes',
+      image: squareAndRound,
+      description: 'GP/MS Tubes & Pipes are manufactured using the best raw materials, providing strength and high performance in diverse applications.'
+    },
   ];
 
   export const teamMembers = [

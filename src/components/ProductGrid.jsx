@@ -22,7 +22,7 @@ const ProjectGrid = () => {
         <h2>All <span className='text-selRed'>Stocks</span></h2>
         <span className="text-xs md:text-base">Our Products are available in all sizes and quantity</span>
       </div>
-      
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-1 md:px-4 pb-3 md:pb-10 bg-black overflow-visible">
         {productsList.map((project, index) => (
           <div
@@ -34,10 +34,10 @@ const ProjectGrid = () => {
               backgroundPosition: 'center',
             }}
           >
-            {/* Loader for images that are still loading     */}
+            {/* Loader for images that are still loading */}
             {loadingStates[index] && (
-              <div className="absolute inset-0 flex items-center justify-center bg-black/70">
-                <Loader /> {/* Display loader component while the image is loading */}
+              <div className="absolute inset-0 flex items-center justify-center bg-black/70" role="alert" aria-live="assertive">
+                <Loader />
               </div>
             )}
 
@@ -68,12 +68,14 @@ const ProjectGrid = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="absolute bottom-0 right-4 z-10 p-2 bg-green-500 text-green rounded-full opacity-80 hover:opacity-100 transition-opacity duration-300 animate-pulse"
+              aria-label={`Chat with us about ${project.title} on WhatsApp`}
             >
-              <FaWhatsapp className='text-4xl' />
+              <FaWhatsapp className="text-4xl" />
             </a>
           </div>
         ))}
       </div>
+
     </>
   );
 };

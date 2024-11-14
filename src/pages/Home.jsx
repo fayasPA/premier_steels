@@ -17,81 +17,34 @@ function Home() {
   }, []);
   return (
     <div className=''>
-     <Helmet>
-        <title>Premier Steels</title>
-        <meta name="description" content="Explore Premier Steels' quality products, strategic partnerships, and commitment to excellence in steel manufacturing." />
-        <meta name="keywords" content="steel products, MS Joints, MS Channels, Premier Steels, steel manufacturing, TMT bars, beams, pipes" />
-        <meta property="og:title" content="Premier Steels - Quality Steel Products" />
-        <meta property="og:description" content="Explore Premier Steels' quality products, strategic partnerships, and commitment to excellence in steel manufacturing." />
+      <Helmet>
+        <title>Premier Steels | Quality Steel Products</title>
+        <meta name="description" content="Explore Premier Steels' high-quality steel products, strategic partnerships, and commitment to excellence in steel manufacturing. We offer MS Joints, MS Channels, TMT Bars, Beams, and more." />
+        <meta name="keywords" content="Premier Steels, Steel Products, TMT Bars, MS Channels, Beams, Steel Wholesale, Steel Manufacturing, Steel Suppliers, Steel Dealers, Industrial Steel" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Premier Steels | Quality Steel Products" />
+        <meta property="og:description" content="Discover top-tier steel products at Premier Steels. From MS Joints to TMT Bars, explore a wide range of steel solutions for your construction needs." />
+        <meta property="og:url" content="https://thepremiersteels.com" />
+        <meta property="og:image" content="/assets/company_logo.jpg" />
+        <meta property="og:type" content="website" />
       </Helmet>
       <Hero />
       <SteelProductsShowcase />
       <MiniAbout />
       <StrategicPartners />
 
-
-
-      {/* Hidden keywords section  for SEO*/}
-
-
-
-      <div className=" h-[1px] overflow-hidden">
-        <p>
-          Steel, TMT, Steel distributor, Steel wholesale, Channels, Beam, Joists, Angle, Plates, Sail,
-          Steel Suppliers, Steel Dealers, Steel Wholesalers, Steel Sheets, Stainless Steel Pipes, Mild
-          Steel, Structural Steel, Steel Tubes, Industrial Steel Products, Steel Fabrication, Steel
-          Sections, Metal Suppliers, Steel Construction Materials, Galvanized Steel, Reinforcement
-          Steel, Heavy Steel Beams, Steel Bars, Steel Manufacturing, Vizag Steel Suppliers, Kerala
-          Steel Suppliers, SAIL Steel Dealers, Steel Products for Construction, Durable Steel Materials,
-          Stainless Steel Plates, Bulk Steel Supply, Custom Steel Solutions, Quality Steel Products,
-          Affordable Steel Wholesaler, Trusted Steel Suppliers, Steel Distributor Near Me, Premium
-          Quality Steel, India
-        </p>
-      </div>
-      <div className=" h-[1px] overflow-hidden">
-        <h1 className="">Steel</h1>
-        <h2 className="">TMT</h2>
-        <h2 className="">Steel distributor</h2>
-        <h2 className="">Steel wholesale</h2>
-        <h2 className="">Channels</h2>
-        <h2 className="">Beam</h2>
-        <h2 className="">Joists</h2>
-        <h2 className="">Angle</h2>
-        <h2 className="">Plates</h2>
-        <h2 className="">SAIL</h2>
-        <h2 className="">Steel Suppliers</h2>
-        <h2 className="">Steel Dealers</h2>
-        <h2 className="">Steel Wholesalers</h2>
-        <h2 className="">Steel Sheets</h2>
-        <h2 className="">Stainless Steel Pipes</h2>
-        <h2 className="">Mild Steel</h2>
-        <h2 className="">Structural Steel</h2>
-        <h2 className="">Steel Tubes</h2>
-        <h2 className="">Industrial Steel Products</h2>
-        <h2 className="">Steel Fabrication</h2>
-        <h2 className="">Steel Sections</h2>
-        <h2 className="">Metal Suppliers</h2>
-        <h2 className="">Steel Construction Materials</h2>
-        <h2 className="">Galvanized Steel</h2>
-        <h2 className="">Reinforcement Steel</h2>
-        <h2 className="">Heavy Steel Beams</h2>
-        <h2 className="">Steel Bars</h2>
-        <h2 className="">Steel Manufacturing</h2>
-        <h2 className="">Kerala Steel Suppliers</h2>
-        <h2 className="">SAIL Steel Dealers</h2>
-        <h2 className="">Steel Products for Construction</h2>
-        <h2 className="">Durable Steel Materials</h2>
-        <h2 className="">Stainless Steel Plates</h2>
-        <h2 className="">Bulk Steel Supply</h2>
-        <h2 className="">Custom Steel Solutions</h2>
-        <h2 className="">Quality Steel Products</h2>
-        <h2 className="">Affordable Steel Wholesaler</h2>
-        <h2 className="">Trusted Steel Suppliers</h2>
-        <h2 className="">Steel Distributor Near Me</h2>
-        <h2 className="">Premium Quality Steel</h2>
-        <h2 className="">Indian Steel Supplier</h2>
+      {/* Ensure all content is relevant and doesn't just target keywords */}
+      <div className="hidden">
+        <p>Explore Premier Steels' offerings: MS Joints, MS Channels, TMT Bars, Beams, and more. We supply a variety of high-quality steel products for construction and manufacturing industries.</p>
       </div>
 
+      <div className="hidden">
+        <h1>Premier Steels - Leading Steel Supplier</h1>
+        <h2>Steel Products</h2>
+        <h2>Steel Manufacturing</h2>
+        <h2>Industrial Steel Solutions</h2>
+        <h2>Custom Steel Solutions</h2>
+      </div>
     </div>
   );
 }

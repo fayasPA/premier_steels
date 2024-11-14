@@ -85,7 +85,6 @@ const EnquiryModal = ({ isEnquiryModalOpen, setIsEnquiryModalOpen }) => {
         return Object.keys(newErrors).length === 0;
     };
 
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (validateForm()) {
@@ -117,14 +116,20 @@ const EnquiryModal = ({ isEnquiryModalOpen, setIsEnquiryModalOpen }) => {
         <div
             className="fixed inset-0 flex items-center justify-center bg-selBlack bg-opacity-50 z-50 backdrop-blur-sm px-4"
             onClick={handleClickOutside}
+            role="dialog"
+            aria-labelledby="enquiryModalTitle"
+            aria-hidden={!isEnquiryModalOpen}
         >
             <div
                 ref={modalRef}
                 className="relative w-full max-w-md md:max-w-lg lg:max-w-xl p-4 md:p-6 lg:p-8 bg-gradient-to-br from-[#380101] to-[#000000] via-[#000000] rounded-3xl shadow-lg overflow-hidden"
+                role="document"
+                aria-describedby="enquiryModalDescription"
             >
                 <button
                     onClick={() => setIsEnquiryModalOpen(false)}
                     className="absolute top-4 right-4 text-white text-xl md:text-2xl font-bold"
+                    aria-label="Close Modal"
                 >
                     &times;
                 </button>
@@ -132,20 +137,24 @@ const EnquiryModal = ({ isEnquiryModalOpen, setIsEnquiryModalOpen }) => {
                 <div className="md:px-5 flex items-center gap-1 text-center justify-start">
                     <div >
                         <div style={{ borderRadius: "50%" }} className="">
-                            <img src={companyLogo} alt="Company Logo" className="w-2 h-2 lg:w-5 lg:h-3 transition-all duration-700 ease-in-out" />
+                            <img
+                                src={companyLogo}
+                                alt="Premier Steels Logo"
+                                className="w-2 h-2 lg:w-5 lg:h-3 transition-all duration-700 ease-in-out"
+                                aria-hidden="true"
+                            />
                         </div>
                     </div>
                     <div className="flex items-center justify-center text-center mt-1 text-sm">
-                        <h1 className="company-font-only text-white transition-all duration-700 ease-in-out font-semibold lg:font-bold">
+                        <h1 className="company-font-only text-white transition-all duration-700 ease-in-out font-semibold lg:font-bold" id="enquiryModalTitle">
                             Premier Steels
                         </h1>
                     </div>
                 </div>
 
                 <div className="md:px-5 max-h-[70vh] overflow-y-auto uppercase">
-                        <h2 className="text-selWhite text-sm md:text-3xl lg:text-xl font-light mt-2">Send your quote</h2>
+                        <h2 className="text-selWhite text-sm md:text-3xl lg:text-xl font-light mt-2" id="enquiryModalDescription">Send your quote</h2>
                     <form className="space-y-4 text-xs" onSubmit={handleSubmit}>
-
                         {/* Input Fields */}
                         <div>
                             <input
@@ -154,23 +163,24 @@ const EnquiryModal = ({ isEnquiryModalOpen, setIsEnquiryModalOpen }) => {
                                 placeholder="Full Name"
                                 className="h-7 w-full p-2 md:p-3 rounded-sm bg-transparent backdrop-blur-sm border border-borderColor text-selWhite placeholder-gray-400 focus:outline-none"
                                 onChange={handleInputChange}
+                                aria-describedby="nameError"
                             />
-                            {errors.name && <p className="text-red-500">{errors.name}</p>}
+                            {errors.name && <p className="text-red-500" id="nameError">{errors.name}</p>}
                         </div>
 
                         {/* Phone Number Fields */}
                         <div className="">
                             <div className='flex w-full  space-x-2'>
-
                                 <input
                                     type="text"
                                     name="phone_number"
                                     placeholder="Phone Number"
                                     className="h-7 flex-1 p-2 md:p-3 rounded-sm bg-transparent backdrop-blur-sm border border-borderColor text-selWhite placeholder-gray-400 focus:outline-none"
                                     onChange={handleInputChange}
+                                    aria-describedby="phoneError"
                                 />
                             </div>
-                            {errors.phone_number && <p className="text-red-500">{errors.phone_number}</p>}
+                            {errors.phone_number && <p className="text-red-500" id="phoneError">{errors.phone_number}</p>}
                         </div>
 
                         {/* Product Selection */}
@@ -183,13 +193,14 @@ const EnquiryModal = ({ isEnquiryModalOpen, setIsEnquiryModalOpen }) => {
                                             type="checkbox"
                                             checked={formValues.looking_for.includes(product.title)}
                                             onChange={() => handleProductChange(product.title)}
-                                            className="hidden" // Hide the default checkbox
+                                            className="hidden"
+                                            aria-labelledby={product.title}
                                         />
                                         <div className="flex items-center justify-center rounded-md mr-2 cursor-pointer">
                                             {formValues.looking_for.includes(product.title) ? (
-                                                <BsCheckSquare className="text-selBlack text-xs bg-gradient-to-r from-[#ffe5b2] to-[#9c8611]" /> // Checked state icon
+                                                <BsCheckSquare className="text-selBlack text-xs bg-gradient-to-r from-[#ffe5b2] to-[#9c8611]" />
                                             ) : (
-                                                <BsSquare className="text-borderColor text-xs" /> // Unchecked state icon
+                                                <BsSquare className="text-borderColor text-xs" />
                                             )}
                                         </div>
                                         <span className={formValues.looking_for.includes(product.title) ? "font-bold" : "text-borderColor2"}>
@@ -197,18 +208,20 @@ const EnquiryModal = ({ isEnquiryModalOpen, setIsEnquiryModalOpen }) => {
                                         </span>
                                     </label>
                                 ))}
-                                <label className="flex items-center text-selWhite w-1/2">
+                                {/* "Other" option */}
+                                <label className="flex items-center text-selWhite">
                                     <input
                                         type="checkbox"
                                         checked={formValues.looking_for.includes("Other")}
                                         onChange={() => handleProductChange("Other")}
-                                        className="hidden" // Hide the default checkbox
+                                        className="hidden"
+                                        aria-labelledby="Other"
                                     />
                                     <div className="flex items-center justify-center rounded-md mr-2 cursor-pointer">
                                         {formValues.looking_for.includes("Other") ? (
-                                            <BsCheckSquare className="text-selBlack text-xs bg-gradient-to-r from-[#ffe5b2] to-[#9c8611]" /> // Checked state icon
+                                            <BsCheckSquare className="text-selBlack text-xs bg-gradient-to-r from-[#ffe5b2] to-[#9c8611]" />
                                         ) : (
-                                            <BsSquare className="text-borderColor text-xs" /> // Unchecked state icon
+                                            <BsSquare className="text-borderColor text-xs" />
                                         )}
                                     </div>
                                     <span className={formValues.looking_for.includes("Other") ? "font-bold" : "text-borderColor2"}>
@@ -216,11 +229,22 @@ const EnquiryModal = ({ isEnquiryModalOpen, setIsEnquiryModalOpen }) => {
                                     </span>
                                 </label>
                             </div>
-
-
                             {errors.looking_for && <p className="text-red-500">{errors.looking_for}</p>}
                         </div>
 
+                        {/* Message */}
+                        <div>
+                            <textarea
+                                name="message"
+                                placeholder="Additional Message"
+                                className="w-full p-3 rounded-sm bg-transparent border border-borderColor text-selWhite placeholder-gray-400 focus:outline-none"
+                                rows="4"
+                                onChange={handleInputChange}
+                                aria-labelledby="messageField"
+                            />
+                        </div>
+
+                        {/* Submit Button */}
                         <div className="mb-6">
                             <textarea
                                 name="message"

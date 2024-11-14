@@ -50,15 +50,16 @@ const SteelProductsShowcase = () => {
   const isMobile = window.innerWidth < 768;
 
   return (
-    <div className="h-auto md:h-screen flex flex-col">
-      <div className='h-fit text-selWhite text-xl md:text-5xl pl-2 md:pl-0 py-5 md:py-10 uppercase font-extralight md:font-thin text-start md:text-center bg-black'>
-        <h2>featured <span className='text-selRed'>Products</span></h2>
-      </div>
+    <section className="h-auto md:h-screen flex flex-col" aria-label="Steel Products Showcase">
+      <header className="h-fit text-selWhite text-xl md:text-5xl pl-2 md:pl-0 py-5 md:py-10 uppercase font-extralight md:font-thin text-start md:text-center bg-black">
+        <h2>Featured <span className='text-selRed'>Products</span></h2>
+      </header>
+
       <div className="relative w-full flex-grow overflow-hidden">
         <iframe
           className="absolute inset-0 w-full h-full object-cover hidden md:block"
           src="https://www.youtube.com/embed/RGkXZ4E7y1E?autoplay=1&mute=1&loop=1&playlist=RGkXZ4E7y1E"
-          title="YouTube video"
+          title="Showcase of Steel Products - Featured Video"
           frameBorder="0"
           allow="autoplay; encrypted-media; picture-in-picture"
           allowFullScreen
@@ -71,14 +72,17 @@ const SteelProductsShowcase = () => {
             transform: 'scale(1.5)', // Scale the video to remove top/bottom bars
             transformOrigin: 'center center', // Keep scaling centered
           }}
+          aria-label="Featured Steel Products Showcase Video"
         ></iframe>
 
         <div className="relative w-full h-full flex flex-col md:flex-row bg-selBlack/60">
           {featuredProjects.map((product, index) => (
-            <div
+            <article
               key={product.id}
               ref={el => sectionRefs.current[index] = el}
               className="group w-full md:w-1/4 h-[40vh] md:h-full relative overflow-hidden cursor-pointer"
+              aria-labelledby={`product-${product.id}`}
+              aria-describedby={`product-desc-${product.id}`}
             >
               {isMobile && loadingStates[index] && (
                 <div className="absolute inset-0 flex items-center justify-center bg-gray-300/70">
@@ -95,24 +99,26 @@ const SteelProductsShowcase = () => {
               />
 
               <div className="product-info w-full bg-gray/50 md:bg-transparent group-hover:bg-gray/60 px-2 absolute bottom-0 inset-x-0 flex flex-col items-start justify-start gap-1 py-2 md:py-4">
-                <span className="text-white text-xl sm:text-2xl md:text-2xl lg:text-3xl font-thin drop-shadow-md">
+                <h3 id={`product-${product.id}`} className="text-white text-xl sm:text-2xl md:text-2xl lg:text-3xl font-thin drop-shadow-md">
                   {product.name}
-                </span>
+                </h3>
               </div>
               <a
-              href={`https://wa.me/+91${companyPhoneNo}?text=I'm%20interested%20in%20the%20product:%20${encodeURIComponent(product.name)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="absolute bottom-2 md:bottom-3 right-4 z-10 text-green md:opacity-80 hover:opacity-100 transition-opacity duration-300 animate-pulse"
-            >
-              <FaWhatsapp className='text-3xl md:text-4xl' />
-            </a>
-            </div>
+                href={`https://wa.me/+91${companyPhoneNo}?text=I'm%20interested%20in%20the%20product:%20${encodeURIComponent(product.name)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute bottom-2 md:bottom-3 right-4 z-10 text-green md:opacity-80 hover:opacity-100 transition-opacity duration-300 animate-pulse"
+                aria-label={`Contact us via WhatsApp about ${product.name}`}
+              >
+                <FaWhatsapp className='text-3xl md:text-4xl' />
+              </a>
+            </article>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
 export default SteelProductsShowcase;
+
