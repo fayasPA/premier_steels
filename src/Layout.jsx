@@ -18,7 +18,7 @@ const Layout = () => {
     // Simulate loading (e.g., waiting for data or assets to load)
     const timer = setTimeout(() => {
       setLoading(false); // Hide loader after loading completes
-    }, 2500); // Adjust the time as needed
+    }, 2000); // Adjust the time as needed
 
     return () => clearTimeout(timer); // Cleanup timer on component unmount
   }, []);
@@ -31,19 +31,19 @@ const Layout = () => {
       {loading ? (
         <Loader /> // Show Loader while loading is true
       ) : (
-        <div className="bg-selBlack/90 flex-grow md:pb-0"> {/* Add pb-16 for bottom space on mobile */}
+        <div className="bg-selBlack/90 flex-grow md:pb-0">
           <FloatingBtn />
           <ToastContainer toastClassName="custom-toast" />
           <Navbar setIsEnquiryModalOpen={setIsEnquiryModalOpen} />
-          
-          <div className="flex-grow">
+
+          <main className="flex-grow">
             <Outlet />
 
             <EnquiryModal
               isEnquiryModalOpen={isEnquiryModalOpen}
               setIsEnquiryModalOpen={setIsEnquiryModalOpen}
             />
-          </div>
+          </main>
 
           <Footer setIsEnquiryModalOpen={setIsEnquiryModalOpen} />
         </div>

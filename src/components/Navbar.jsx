@@ -80,7 +80,12 @@ const Navbar = ({ setIsEnquiryModalOpen }) => {
                     <div className="flex items-center gap-1 text-center justify-center">
                         <NavLink to="/">
                             <div className="overflow-hidden p-1 lg:p-2" style={{ borderRadius: "50%" }}>
-                                <img src={companyLogo} alt="Company Logo" className="w-5 h-5 lg:w-10 lg:h-7 transition-all duration-700 ease-in-out" />
+                                <img
+                                    src={companyLogo}
+                                    alt="Premier Steels Logo"
+                                    className="w-5 h-5 lg:w-10 lg:h-7 transition-all duration-700 ease-in-out"
+                                    role="img" // Added role for clarity
+                                />
                             </div>
                         </NavLink>
                         <NavLink to="/" className="flex items-center justify-center text-center mt-1">
@@ -110,13 +115,14 @@ const Navbar = ({ setIsEnquiryModalOpen }) => {
 
                     <button className="request-nav-button desktop px-10 py-2"
                         onClick={() => setIsEnquiryModalOpen(true)}
+                        aria-label="Request a Quote"
                     >
-                        <svg viewBox="0 0 24 24" className="arr-2" xmlns="http://www.w3.org/2000/svg">
+                        <svg viewBox="0 0 24 24" className="arr-2" xmlns="https://www.w3.org/2000/svg">
                             <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
                         </svg>
                         <span className="text">Get Quote</span>
                         <span className="circle"></span>
-                        <svg viewBox="0 0 24 24" className="arr-1" xmlns="http://www.w3.org/2000/svg">
+                        <svg viewBox="0 0 24 24" className="arr-1" xmlns="https://www.w3.org/2000/svg">
                             <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
                         </svg>
                     </button>
@@ -127,6 +133,7 @@ const Navbar = ({ setIsEnquiryModalOpen }) => {
                             className="text-white p-2 rounded-md focus:outline-none"
                             aria-controls="mobile-menu"
                             aria-expanded={isMobileMenuOpen}
+                            aria-label="Toggle Navigation Menu"
                         >
                             {isMobileMenuOpen ? <FiX className="h-6 w-6" /> : <FiMenu className="h-6 w-6" />}
                         </button>
@@ -158,12 +165,12 @@ const Navbar = ({ setIsEnquiryModalOpen }) => {
                     <button className="ml-3 request-nav-button animate-pulse mobile px-7 py-1"
                         onClick={() => setIsEnquiryModalOpen(true)}
                     >
-                        <svg viewBox="0 0 24 24" className="arr-2" xmlns="http://www.w3.org/2000/svg">
+                        <svg viewBox="0 0 24 24" className="arr-2" xmlns="https://www.w3.org/2000/svg">
                             <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
                         </svg>
                         <span className="text">Get Quote</span>
                         <span className="circle"></span>
-                        <svg viewBox="0 0 24 24" className="arr-1" xmlns="http://www.w3.org/2000/svg">
+                        <svg viewBox="0 0 24 24" className="arr-1" xmlns="https://www.w3.org/2000/svg">
                             <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
                         </svg>
                     </button>

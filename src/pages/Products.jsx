@@ -25,26 +25,16 @@ const Products = () => {
           name="keywords"
           content="steel products, MS Joints, MS Plates, MS Channels, Steel Supplier, Steel Pipes, Structural Steel, Industrial Steel, Premier Steels, Steel Bars, MS Flats, Steel Tubes, Galvanized Steel, Steel Plates, Steel for Construction, Steel Wholesale"
         />
-        <meta
-          name="robots"
-          content="index, follow"
-        />
-        <meta
-          property="og:title"
-          content="Our Products | Premier Steels"
-        />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Our Products | Premier Steels" />
         <meta
           property="og:description"
           content="Discover a variety of steel products including MS Joints, Plates, Channels, Pipes, and more at Premier Steels. Serving the steel industry with top-quality materials."
         />
-        <meta
-          property="og:type"
-          content="website"
-        />
-        <meta
-          property="og:url"
-          content="https://www.thepremiersteels.com/products"
-        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.thepremiersteels.com/products" />
+        <meta property="og:image" content="/assets/company_logo.jpg" />
+        <link rel="canonical" href="https://www.thepremiersteels.com/products" />
       </Helmet>
 
 

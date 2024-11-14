@@ -55,7 +55,7 @@ const Contacts = () => {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(
               {
-                "@context": "http://schema.org",
+                "@context": "https://schema.org",
                 "@type": "LocalBusiness",
                 "name": "Premier Steels",
                 "address": {

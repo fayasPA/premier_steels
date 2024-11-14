@@ -32,7 +32,7 @@ const About = () => {
         <script 
           type="application/ld+json" 
           dangerouslySetInnerHTML={{
-            "@context": "http://schema.org",
+            "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Premier Steels",
             "url": "https://www.thepremiersteels.com",
