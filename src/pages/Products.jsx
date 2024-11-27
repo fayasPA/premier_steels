@@ -33,7 +33,7 @@ const Products = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.thepremiersteels.com/products" />
-        <meta property="og:image" content="/assets/company_logo.jpg" />
+        <meta property="og:image" content="https://www.thepremiersteels.com/assets/company_logo.jpg" />
         <link rel="canonical" href="https://www.thepremiersteels.com/products" />
       </Helmet>
 

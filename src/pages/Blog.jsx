@@ -13,7 +13,7 @@ const Blog = () => {
       sessionStorage.setItem('scrollPos', window.scrollY);
     };
   }, []);
-  
+
   return (
     <div>
       <Helmet>
@@ -26,27 +26,30 @@ const Blog = () => {
           name="keywords"
           content="steel production, steel distribution, mild steel, steel properties, steel grades, steel industry trends, TMT bars, structural steel, Premier Steels blog"
         />
-        
+
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Steel Blog | Premier Steels" />
         <meta property="og:description" content="Learn more about steel production, grades, and trends in the steel industry." />
-        <meta property="og:image" content="https://thepremiersteels.com/path-to-image.jpg" />
+        <meta property="og:image" content="https://www.thepremiersteels.com/assets/company_logo.jpg" />
         <meta property="og:url" content="https://thepremiersteels.com/blog" />
         <meta property="og:type" content="website" />
-        
+
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Steel Blog | Premier Steels" />
         <meta name="twitter:description" content="Steel insights and industry trends for professionals." />
-        <meta name="twitter:image" content="https://thepremiersteels.com/path-to-image.jpg" />
+        <meta name="twitter:image" content="https://www.thepremiersteels.com/assets/company_logo.jpg" />
+
+        {/* Canonical Tag */}
+        <link rel="canonical" href="https://thepremiersteels.com/blog" />
       </Helmet>
-      
+
       <BlogHero />
       <Blogs />
 
       {/* Structured Data for SEO */}
       <script type="application/ld+json">
-      {`
+        {`
       {
         "@context": "https://schema.org",
         "@type": "Blog",

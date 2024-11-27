@@ -25,7 +25,7 @@ function Home() {
         <meta property="og:title" content="Premier Steels | Quality Steel Products" />
         <meta property="og:description" content="Discover top-tier steel products at Premier Steels. From MS Joints to TMT Bars, explore a wide range of steel solutions for your construction needs." />
         <meta property="og:url" content="https://thepremiersteels.com" />
-        <meta property="og:image" content="/assets/company_logo.jpg" />
+        <meta property="og:image" content="https://www.thepremiersteels.com/assets/company_logo.jpg" />
         <meta property="og:type" content="website" />
       </Helmet>
       <Hero />
