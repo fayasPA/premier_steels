@@ -12,26 +12,16 @@ import Loader from './components/Loader'; // Import your Loader component
 const Layout = () => {
   const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false); // Modal visibility state
   const [selectedEnqProduct, setSelectedEnqProduct] = useState(null); // Placeholder for product data if needed
-  const [loading, setLoading] = useState(true); // Loading state
-
-  useEffect(() => {
-    // Simulate loading (e.g., waiting for data or assets to load)
-    const timer = setTimeout(() => {
-      setLoading(false); // Hide loader after loading completes
-    }, 2000); // Adjust the time as needed
-
-    return () => clearTimeout(timer); // Cleanup timer on component unmount
-  }, []);
 
   return (
     <div
       style={{ backgroundImage: `url(${bgImg})` }}
       className="your-main-container bg-contain md:bg-contain bg-center min-h-screen flex flex-col"
     >
-      {loading ? (
-        <Loader /> // Show Loader while loading is true
-      ) : (
         <div className="bg-selBlack/90 flex-grow md:pb-0">
+        <h1 className='hidden'>
+          Premier Steels
+        </h1>
           <FloatingBtn />
           <ToastContainer toastClassName="custom-toast" />
           <Navbar setIsEnquiryModalOpen={setIsEnquiryModalOpen} />
@@ -47,7 +37,6 @@ const Layout = () => {
 
           <Footer setIsEnquiryModalOpen={setIsEnquiryModalOpen} />
         </div>
-      )}
     </div>
   );
 };

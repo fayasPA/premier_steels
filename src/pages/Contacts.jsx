@@ -51,7 +51,7 @@ const Contacts = () => {
           content="https://www.thepremiersteels.com/contact"
         />
         {/* Canonical Tag */}
-        <link rel="canonical" href="https://thepremiersteels.com/contact" />
+        <link rel="canonical" href="https://www.thepremiersteels.com/contact" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

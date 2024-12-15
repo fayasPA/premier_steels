@@ -1,9 +1,25 @@
 {
-    "rewrites": [
-      {
-        "source": "/(.*)",
-        "destination": "/index.html"
-      }
-    ]
-  }
-  
+  "redirects": [
+    {
+      "source": "http://thepremiersteels.com",
+      "destination": "https://www.thepremiersteels.com",
+      "permanent": true
+    },
+    {
+      "source": "https://thepremiersteels.com",
+      "destination": "https://www.thepremiersteels.com",
+      "permanent": true
+    },
+    {
+      "source": "http://www.thepremiersteels.com",
+      "destination": "https://www.thepremiersteels.com",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

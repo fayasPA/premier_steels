@@ -31,7 +31,7 @@ const Blog = () => {
         <meta property="og:title" content="Steel Blog | Premier Steels" />
         <meta property="og:description" content="Learn more about steel production, grades, and trends in the steel industry." />
         <meta property="og:image" content="https://www.thepremiersteels.com/assets/company_logo.jpg" />
-        <meta property="og:url" content="https://thepremiersteels.com/blog" />
+        <meta property="og:url" content="https://www.thepremiersteels.com/blog" />
         <meta property="og:type" content="website" />
 
         {/* Twitter Card Meta Tags */}
@@ -41,7 +41,7 @@ const Blog = () => {
         <meta name="twitter:image" content="https://www.thepremiersteels.com/assets/company_logo.jpg" />
 
         {/* Canonical Tag */}
-        <link rel="canonical" href="https://thepremiersteels.com/blog" />
+        <link rel="canonical" href="https://www.thepremiersteels.com/blog" />
       </Helmet>
 
       <BlogHero />
@@ -55,14 +55,14 @@ const Blog = () => {
         "@type": "Blog",
         "name": "Premier Steels Blog",
         "description": "Learn about steel production, grades, and industry trends.",
-        "url": "https://thepremiersteels.com/blog",
-        "mainEntityOfPage": "https://thepremiersteels.com/blog",
+        "url": "https://www.thepremiersteels.com/blog",
+        "mainEntityOfPage": "https://www.thepremiersteels.com/blog",
         "publisher": {
           "@type": "Organization",
           "name": "Premier Steels",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://thepremiersteels.com/assets/company_logo.jpg"
+            "url": "https://www.thepremiersteels.com/assets/company_logo.jpg"
           }
         }
       }
