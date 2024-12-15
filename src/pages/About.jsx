@@ -36,7 +36,7 @@ const About = () => {
             "@type": "Organization",
             "name": "Premier Steels",
             "url": "https://www.thepremiersteels.com",
-            "logo": "https://www.thepremiersteels.com/assets/images/company_logo.jpg",
+            "logo": "https://www.thepremiersteels.com/assets/company_logo.jpg",
             "description": "Premier Steels is a leading steel supplier offering a range of high-quality steel products and services.",
             "address": {
               "@type": "PostalAddress",

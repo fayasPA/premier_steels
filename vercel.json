@@ -1,9 +1,34 @@
 {
-    "rewrites": [
-      {
-        "source": "/(.*)",
-        "destination": "/index.html"
-      }
-    ]
-  }
-  
+  "redirects": [
+    {
+      "source": "/:path*", 
+      "has": [
+        { "type": "host", "value": "thepremiersteels.com" }
+      ],
+      "destination": "https://www.thepremiersteels.com/:path*", 
+      "permanent": true
+    },
+    {
+      "source": "/:path*", 
+      "has": [
+        { "type": "host", "value": "http://www.thepremiersteels.com" }
+      ],
+      "destination": "https://www.thepremiersteels.com/:path*", 
+      "permanent": true
+    },
+    {
+      "source": "/:path*", 
+      "has": [
+        { "type": "host", "value": "https://thepremiersteels.com" }
+      ],
+      "destination": "https://www.thepremiersteels.com/:path*", 
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

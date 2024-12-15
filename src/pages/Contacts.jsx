@@ -22,36 +22,38 @@ const Contacts = () => {
     <div className="bg-zinc text-white">
       <Helmet>
         <title>Contact Us | Premier Steels</title>
-        <meta 
-          name="description" 
-          content="Get in touch with Premier Steels, a leading steel supplier. Reach out to us for inquiries, customer support, and more. Contact Premier Steels for high-quality steel products and services." 
+        <meta
+          name="description"
+          content="Get in touch with Premier Steels, a leading steel supplier. Reach out to us for inquiries, customer support, and more. Contact Premier Steels for high-quality steel products and services."
         />
-        <meta 
-          name="keywords" 
-          content="contact Premier Steels, steel supplier contact, steel inquiries, customer support, steel products, steel supplier, Premier Steels contact information, get in touch with Premier Steels" 
+        <meta
+          name="keywords"
+          content="contact Premier Steels, steel supplier contact, steel inquiries, customer support, steel products, steel supplier, Premier Steels contact information, get in touch with Premier Steels"
         />
-        <meta 
-          name="robots" 
-          content="index, follow" 
+        <meta
+          name="robots"
+          content="index, follow"
         />
-        <meta 
-          property="og:title" 
-          content="Contact Us | Premier Steels" 
+        <meta
+          property="og:title"
+          content="Contact Us | Premier Steels"
         />
-        <meta 
-          property="og:description" 
-          content="Contact Premier Steels for your steel product inquiries. Reach our support team for more information on our products and services." 
+        <meta
+          property="og:description"
+          content="Contact Premier Steels for your steel product inquiries. Reach our support team for more information on our products and services."
         />
-        <meta 
-          property="og:type" 
-          content="website" 
+        <meta
+          property="og:type"
+          content="website"
         />
-        <meta 
-          property="og:url" 
-          content="https://www.thepremiersteels.com/contact" 
+        <meta
+          property="og:url"
+          content="https://www.thepremiersteels.com/contact"
         />
-        <script 
-          type="application/ld+json" 
+        {/* Canonical Tag */}
+        <link rel="canonical" href="https://www.thepremiersteels.com/contact" />
+        <script
+          type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(
               {
@@ -69,7 +71,7 @@ const Contacts = () => {
                 "email": `${companyEmail}`,
                 "url": "https://www.thepremiersteels.com"
               }
-              )
+            )
           }}
         />
       </Helmet>
